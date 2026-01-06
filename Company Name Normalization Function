@@ -1,0 +1,15 @@
+def normalize_company_name(company_name):
+    """
+    Normalize different company name formats into:
+    'CAF SoftSol India Pvt Ltd.'
+    """
+
+    if not company_name or not isinstance(company_name, str):
+        return None
+
+    text = company_name.lower()
+
+    if "caf" in text and ("softsol" in text or "solution" in text):
+        return "CAF SoftSol India Pvt Ltd."
+
+    return None
