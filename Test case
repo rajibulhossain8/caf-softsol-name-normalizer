@@ -1,0 +1,13 @@
+def test_normalize_company_name():
+    test_cases = [
+        "CAF softsol",
+        "CAF solution",
+        "CAF softSolution India Pvt Limited",
+        "caf SOFTSOL",
+        "",
+        None,
+        "Random Company"
+    ]
+
+    for case in test_cases:
+        print(f"Input: {case} -> Output: {normalize_company_name(case)}")
